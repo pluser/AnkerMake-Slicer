@@ -2,7 +2,7 @@
 #define FDMGCODEPREVIEWENTRY_H
 #include <QtCore/qglobal.h>
 #include <QStringList>
-#include "glview/viewWidget.h"
+#include "glview/viewwidget.h"
 //#if defined(TOOLLIB_LIBRARY)
 //#  define TOOLLIB_EXPORT Q_DECL_EXPORT
 //#else

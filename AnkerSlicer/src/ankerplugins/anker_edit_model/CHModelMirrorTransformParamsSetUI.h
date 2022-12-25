@@ -18,7 +18,7 @@
 #include <vector>
 #include "QPushButton"
 #include "QCheckBox"
-#include "../../common/controlInterface/BubbleWidget.h"
+#include "../../common/controlInterface/bubbleWidget.h"
 #include "../../common/controlInterface/line.h"
 #include <QToolButton>
 

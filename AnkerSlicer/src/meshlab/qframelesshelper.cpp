@@ -2,7 +2,7 @@
 #include "qdatetime.h"
 #include "qevent.h"
 #include "qdebug.h"
-#include "Qshadowhelper.h"
+#include "qshadowhelper.h"
 #include <QPainter>
 #include <QScreen>
 #ifdef Q_OS_WIN

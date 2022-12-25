@@ -44,7 +44,7 @@
 #include <wrap/io_trimesh/export_vmi.h>
 #include <wrap/io_trimesh/export_gts.h>
 #include <wrap/io_trimesh/export.h>
-#include <qDebug>
+#include <QDebug>
 using namespace std;
 using namespace vcg;
 
@@ -945,7 +945,7 @@ QImage BaseMeshIOPlugin::loadTga(const char* filePath)
     return img;
 }
 
-#include <qDebug>
+#include <QDebug>
 #include <QAction>
 #include "common/controlInterface/controlInterface.h"
 using namespace control;

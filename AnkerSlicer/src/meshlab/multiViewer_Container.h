@@ -30,7 +30,7 @@
 #include <QVector>
 #include <QSplitter>
 #include <QSplitterHandle>
-#include <qDebug>
+#include <QDebug>
 
 #include <common/ml_document/mesh_document.h>
 #include <common/ml_shared_data_context/ml_shared_data_context.h>

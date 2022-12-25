@@ -6,7 +6,7 @@
 #include <QDialog>
 #include "QLabel"
 #include <vector>
-#include "../../common/controlInterface/BubbleWidget.h"
+#include "../../common/controlInterface/bubbleWidget.h"
 #include "../../common/controlInterface/line.h"
 #include "../../common/controlInterface/switchbutton.h"
 #include <QDoubleSpinBox>

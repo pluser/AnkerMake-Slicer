@@ -18,6 +18,7 @@ CONFIG += warn_off
 QMAKE_CXXFLAGS += -Wall
 QMAKE_CXXFLAGS += -Wno-comment
 }
+QMAKE_CXXFLAGS += -fpermissive
 # VCG directory
 VCGDIR = $$MESHLAB_SOURCE_DIRECTORY/vcglib
 

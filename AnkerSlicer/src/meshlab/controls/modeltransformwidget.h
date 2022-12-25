@@ -8,7 +8,7 @@
 #include <QStyleOption>
 #include <QLabel>
 #include "glarea.h"
-#include "common/controlInterface/BubbleWidget.h"
+#include "common/controlInterface/bubbleWidget.h"
 #include "common/ak_const.h"
 #include "common/controlInterface/line.h"
 namespace  control{

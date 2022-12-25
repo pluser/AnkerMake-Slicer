@@ -10,7 +10,7 @@
 #include <wrap/io_trimesh/import_off.h>
 #include <wrap/io_trimesh/import_obj.h>
 #include <wrap/io_trimesh/import_stl.h>
-#include <qDebug>
+#include <QDebug>
 
 namespace mlp {
 

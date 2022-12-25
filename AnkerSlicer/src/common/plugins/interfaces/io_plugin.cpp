@@ -1,6 +1,6 @@
 #include "io_plugin.h"
 #include "../../ml_document/mesh_document.h"
-#include <qDebug>
+#include <QDebug>
 
 unsigned int IOPlugin::numberMeshesContainedInFile(
 		const QString&,

@@ -7,6 +7,9 @@
 
 #elif __APPLE__
 #define NETWORKEXE "AnkerSlicerNetWork.app"
+
+#elif __linux__
+#define NETWORKEXE "AnkerSlicerNetWork"
 #endif
 
 HeartBeatThread::HeartBeatThread(QObject *parent) : QThread(parent) , m_process(nullptr)
@@ -38,6 +41,8 @@ void HeartBeatThread::run()
             QString cmdStr = dir + NETWORKEXE;
 #elif __APPLE__
             QString cmdStr = QString("open ") + dir + NETWORKEXE;
+#elif __linux__
+            QString cmdStr = dir + NETWORKEXE;
 #endif
             //qDebug() << "cmdStr: " << cmdStr;
 
@@ -179,6 +184,26 @@ bool HeartBeatWork::processIsRun(const QString &exeName)
         }
         pclose(pPipe);
     }
+#elif __linux__
+    //QString strCommand = "ps -ef|grep " + exeName + " |grep -v grep |awk '{print $2}'";
+    std::string strCmd = "ps -ef|grep " + exeName.toStdString() + " |grep -v grep |awk '{print $2}'";
+    const char* strFindName = strCmd.c_str();
+    FILE *pPipe = popen(strFindName, "r");
+    if(pPipe != NULL)
+    {
+        char name[512] = { 0 };
+        while(fgets(name, sizeof(name), pPipe) != NULL)
+        {
+            int nLen = strlen(name);
+            if(nLen > 0 && name[nLen - 1] == '\n')
+            {
+                name[nLen - 1] = '\0';
+                ret = true;
+                break;
+            }
+        }
+        pclose(pPipe);
+    }
 #endif
     if(ret && started && heartBeatCount >= 5) 
     {
@@ -213,6 +238,8 @@ void HeartBeatWork::doWork()
             QString cmdStr = dir + NETWORKEXE;
 #elif __APPLE__
             QString cmdStr = QString("open ") + dir + NETWORKEXE;
+#elif __linux__
+            QString cmdStr = dir + NETWORKEXE;
 #endif
             //qDebug() << "cmdStr: " << cmdStr;
 

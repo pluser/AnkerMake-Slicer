@@ -5,7 +5,7 @@
 #include <QMouseEvent>
 #include <QApplication>
 #include <QDesktopWidget>
-#include <qDebug>
+#include <QDebug>
 #include <QElapsedTimer>
 #define BUTTON_HEIGHT 30		
 #define BUTTON_WIDTH 30			

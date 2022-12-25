@@ -1,6 +1,6 @@
 #include "enginelib.h"
 #include <QDebug>
-#include <QProcess.h>
+#include <QProcess>
 #ifdef DEBUG_BY_CL
 #include "lib/Application.h"
 #endif

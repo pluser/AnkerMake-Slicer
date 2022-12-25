@@ -26,7 +26,7 @@
 
 #include "../interfaces/io_plugin.h"
 #include "generic_container_iterator.h"
-#include <qDebug>
+#include <QDebug>
 
 /**
  * @brief The IOPluginContainer class allows to organize
